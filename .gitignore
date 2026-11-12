@@ -1,0 +1,78 @@
+# ── Datos ───────────────────────────────────────────────────────────────
+data/raw/
+data/processed/
+data/external/
+*.wav
+*.WAV
+*.csv
+*.csv.gz
+*.zip
+*.tar.gz
+*.db
+
+# Excepción: datasets pequeños que sí queremos versionar como referencia
+!data/processed/.gitkeep
+
+# ── Modelos entrenados y artefactos pesados ─────────────────────────────
+results/models/
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Excepción: dejar un .gitkeep para mantener la carpeta en el repo
+!results/models/.gitkeep
+
+# ── Notebooks: outputs y checkpoints ────────────────────────────────────
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# ── Python ───────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.Python
+*.so
+
+# ── Entornos virtuales ───────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+.conda/
+
+# ── Variables de entorno y credenciales ─────────────────────────────────
+.env
+.env.local
+*.key
+secrets.yaml
+
+# ── Cachés de extracción de features (pesados, regenerables) ───────────
+.cache/
+*.npy
+*.npz
+features_cache/
+
+# ── Logs y experiment tracking ──────────────────────────────────────────
+logs/
+*.log
+mlruns/
+wandb/
+
+# ── Sistema operativo / editores ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ── Documentos temporales de Office ─────────────────────────────────────
+~$*.docx
+~$*.xlsx
